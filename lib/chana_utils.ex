@@ -178,7 +178,7 @@ defmodule ChanaUtilsConsumer do
 
             Nostrum.Api.create_interaction_response(interaction, response)
 
-          voice_channel_id ->
+            voice_channel_id ->
             Voice.join_channel(interaction.guild_id, voice_channel_id)
 
             response = %{
@@ -227,7 +227,7 @@ defmodule ChanaUtilsConsumer do
 
   end
 
-  def handle_event({:VOICE_SPEAKING_UPDATE}, voice_data, _ws_state) do
+  def handle_event({:VOICE_SPEAKING_UPDATE, voice_data, _ws_state}) do
     if(voice_data.speaking) do
       
     end
