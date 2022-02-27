@@ -192,7 +192,6 @@ defmodule ChanaUtilsConsumer do
             Nostrum.Api.create_interaction_response(interaction, response)
 
             Task.start(fn ->
-              Process.sleep(1000)
               Voice.play(interaction.guild_id, url, :ytdl, realtime: false)
             end)
         end
@@ -226,6 +225,12 @@ defmodule ChanaUtilsConsumer do
       end
     end
 
+  end
+
+  def handle_event({:VOICE_SPEAKING_UPDATE}, voice_data, _ws_state) do
+    if(voice_data.speaking) do
+      
+    end
   end
 
   def handle_event(_event) do
