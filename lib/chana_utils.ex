@@ -192,7 +192,7 @@ defmodule ChanaUtilsConsumer do
             Nostrum.Api.create_interaction_response(interaction, response)
 
             Task.start(fn ->
-              Process.sleep(500)
+              Process.sleep(1000)
               Voice.play(interaction.guild_id, url, :ytdl, realtime: false)
             end)
         end
