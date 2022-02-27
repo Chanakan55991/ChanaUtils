@@ -138,10 +138,12 @@ defmodule ChanaUtilsConsumer do
     Nostrum.Api.create_guild_application_command("850377546046636093", @play_command)
     Nostrum.Api.create_guild_application_command("910444948724269086", @play_command)
     Nostrum.Api.create_guild_application_command("935001754989367396", @play_command)
+    Nostrum.Api.create_guild_application_command("925645184639860837", @play_command)
 
     Nostrum.Api.create_guild_application_command("850377546046636093", @pause_command)
     Nostrum.Api.create_guild_application_command("910444948724269086", @pause_command)
     Nostrum.Api.create_guild_application_command("935001754989367396", @pause_command)
+    Nostrum.Api.create_guild_application_command("925645184639860837", @pause_command)
     Logger.info("Command Registered")
 
     Api.update_status(:online, "you :D", 3)
